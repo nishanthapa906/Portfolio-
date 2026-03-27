@@ -24,7 +24,7 @@ export function Contact() {
         <div className="flex justify-center gap-6 mt-10">
           {[
             { label: 'GitHub', href: 'https://github.com/nishanthapa906' },
-            { label: 'LinkedIn', href: 'https://linkedin.com/in/arjunthapa' },
+            { label: 'LinkedIn', href: 'https://www.linkedin.com/in/arjun-thapa-b659811a3/' },
             { label: 'Email', href: 'mailto:nishanthapa906@gmail.com' },
           ].map(link => (
             <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
