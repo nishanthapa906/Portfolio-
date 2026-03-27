@@ -14,15 +14,15 @@ function SkillRow({ s, i, vis }: { s: typeof SKILLS[0]; i: number; vis: boolean 
       onMouseEnter={() => sh(true)} onMouseLeave={() => sh(false)}
       className="p-4 rounded-lg border flex justify-between items-center cursor-default transition-all duration-300"
       style={{
-        background: h ? `rgba(${hexToRgb(s.color)},0.07)` : 'rgba(255,255,255,0.025)',
-        borderColor: h ? `rgba(${hexToRgb(s.color)},0.25)` : 'rgba(255,255,255,0.05)',
+        background: h ? `rgba(${hexToRgb(s.color)},0.12)` : 'rgba(255,255,255,0.025)',
+        borderColor: h ? `rgba(${hexToRgb(s.color)},0.35)` : 'rgba(255,255,255,0.05)',
         opacity: vis ? 1 : 0, transform: vis ? 'translateX(0)' : 'translateX(20px)',
         transitionDelay: `${i * 65 + 300}ms`,
       }}
     >
       <div>
-        <p className="font-sans font-medium text-sm text-foreground">{s.cat}</p>
-        <p className="font-mono text-[0.65rem] text-muted-foreground">{s.items.length} tools</p>
+        <p className="font-sans font-bold text-base text-foreground">{s.cat}</p>
+        <p className="font-mono text-xs text-muted-foreground font-semibold">{s.items.length} tools</p>
       </div>
       <div className="flex flex-wrap gap-1.5 justify-end max-w-[60%]">
         {s.items.map(item => (
@@ -40,35 +40,35 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Left */}
         <div className="flex flex-col gap-6" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.6s ease' }}>
-          <div className="flex items-center gap-3 font-mono text-xs text-muted-foreground uppercase tracking-widest">
-            <span className="w-8 h-px bg-primary" />
+          <div className="flex items-center gap-3 font-mono text-xs text-green font-bold uppercase tracking-widest">
+            <span className="w-8 h-px bg-green" />
             About Me
           </div>
 
-          <img src={profileImg} alt="Arjun Thapa" className="w-32 h-32 rounded-2xl object-cover border-2 border-border" loading="lazy" />
+          <img src={profileImg} alt="Arjun Thapa" className="w-40 h-40 rounded-2xl object-cover border-3 border-primary" loading="lazy" />
 
-          <h2 className="font-serif text-3xl italic text-cream leading-snug">
-            I write code the way a craftsman builds — with intention.
+          <h2 className="font-serif text-5xl italic text-cream font-black leading-snug">
+            I write code the way a craftsman builds — <span className="text-primary">with intention</span>.
           </h2>
 
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            I'm Arjun, a full stack developer from Kathmandu who genuinely enjoys 
-            the problem-solving side of this work. I started building things on the web 
+          <p className="text-foreground text-lg leading-relaxed font-medium">
+            I'm <span className="text-primary font-bold">Arjun</span>, a <span className="text-green font-bold">full stack developer</span> from <span className="text-blue font-bold">Kathmandu</span> who genuinely enjoys 
+            the <span className="text-yellow font-bold">problem-solving</span> side of this work. I started building things on the web 
             because I wanted to see ideas come to life — and I haven't stopped since.
           </p>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            From a MERN school management system to a live voice emotion analyzer 
-            deployed on Hugging Face — I build things that are real, not just demos. 
-            Currently finishing my BCA and actively looking for my next role.
+          <p className="text-foreground text-lg leading-relaxed font-medium">
+            From a <span className="text-green font-bold">MERN</span> school management system to a <span className="text-blue font-bold">live voice emotion analyzer</span> 
+            deployed on Hugging Face — I build things that are <span className="text-primary font-bold">real, not just demos</span>. 
+            Currently finishing my <span className="text-yellow font-bold">BCA</span> and actively looking for my next role.
           </p>
 
-          <div className="flex items-center gap-3 mt-2">
+          <div className="flex items-center gap-3 mt-4">
             <a href="mailto:nishanthapa906@gmail.com"
-              className="px-6 py-2.5 bg-primary text-primary-foreground font-sans font-medium text-sm rounded-lg no-underline hover:-translate-y-0.5 transition-all duration-200 shadow-[0_4px_16px_hsl(var(--primary)/0.25)]">
+              className="px-8 py-3 bg-primary text-primary-foreground font-sans font-bold text-base rounded-lg no-underline hover:-translate-y-0.5 transition-all duration-200 shadow-[0_4px_16px_hsl(var(--primary)/0.25)]">
               Email Me
             </a>
             <a href="https://github.com/nishanthapa906" target="_blank" rel="noopener noreferrer"
-              className="px-5 py-2.5 border border-border text-muted-foreground font-sans text-sm rounded-lg no-underline hover:text-foreground hover:border-foreground/20 transition-all duration-200">
+              className="px-6 py-3 border-2 border-primary text-primary font-sans font-bold text-base rounded-lg no-underline hover:bg-primary hover:text-primary-foreground transition-all duration-200">
               GitHub ↗
             </a>
           </div>

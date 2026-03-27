@@ -85,4 +85,3 @@
 .animate-float { animation: float 5s ease-in-out infinite; }
 .animate-dot-pulse { animation: dotPulse 1.2s ease-in-out infinite; }
 .animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
-}

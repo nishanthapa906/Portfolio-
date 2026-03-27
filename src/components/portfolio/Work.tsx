@@ -15,14 +15,14 @@ function ProjectRow({ p, i }: { p: typeof PROJECTS[0]; i: number }) {
         className="grid grid-cols-[44px_1fr_auto_36px] gap-5 items-center py-5 px-4 cursor-pointer transition-all duration-200"
         style={{
           borderBottom: open ? 'none' : '1px solid rgba(255,255,255,0.06)',
-          background: h || open ? 'rgba(255,255,255,0.025)' : 'transparent',
+          background: h || open ? 'rgba(255,255,255,0.04)' : 'transparent',
           borderRadius: h || open ? '10px' : '0',
         }}
       >
-        <span className="font-mono text-xs text-muted-foreground">{p.n}</span>
+        <span className="font-mono text-sm font-bold text-primary">{p.n}</span>
         <div>
-          <p className="font-sans font-medium text-foreground text-sm">{p.title}</p>
-          <p className="font-mono text-[0.65rem] text-muted-foreground">{p.role}</p>
+          <p className="font-sans font-black text-foreground text-lg">{p.title}</p>
+          <p className="font-mono text-xs text-muted-foreground font-semibold">{p.role}</p>
         </div>
         <div className="hidden sm:flex items-center gap-2">
           {p.stack.slice(0, 2).map(s => (
@@ -45,12 +45,12 @@ function ProjectRow({ p, i }: { p: typeof PROJECTS[0]; i: number }) {
           </div>
           <div className="flex items-start gap-3">
             <a href={p.gh} target="_blank" rel="noopener noreferrer"
-              className="px-4 py-2 border border-border font-mono text-xs text-muted-foreground rounded-lg no-underline hover:bg-secondary hover:border-foreground/20 transition-all duration-200">
+              className="px-5 py-2.5 border-2 border-primary font-mono text-sm text-primary font-bold rounded-lg no-underline hover:bg-primary hover:text-primary-foreground transition-all duration-200">
               View on GitHub ↗
             </a>
             {p.live && (
               <a href={p.live} target="_blank" rel="noopener noreferrer"
-                className="px-4 py-2 bg-primary text-primary-foreground font-mono text-xs rounded-lg no-underline hover:-translate-y-0.5 transition-all duration-200">
+                className="px-5 py-2.5 bg-green text-primary-foreground font-mono text-sm font-bold rounded-lg no-underline hover:-translate-y-0.5 transition-all duration-200">
                 ● Live Demo
               </a>
             )}
@@ -68,16 +68,16 @@ export function Work() {
       <div style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.6s ease' }}>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
           <div>
-            <div className="flex items-center gap-3 font-mono text-xs text-muted-foreground uppercase tracking-widest mb-3">
-              <span className="w-8 h-px bg-primary" />
+            <div className="flex items-center gap-3 font-mono text-xs text-green font-bold uppercase tracking-widest mb-3">
+              <span className="w-8 h-px bg-green" />
               Selected Work
             </div>
-            <h2 className="font-serif text-4xl italic text-cream">Projects</h2>
+            <h2 className="font-serif text-5xl italic text-cream font-black">Projects</h2>
           </div>
           <div className="text-right">
-            <p className="font-mono text-xs text-muted-foreground">6 projects · 2022–2024</p>
+            <p className="font-mono text-sm text-foreground font-bold">6 projects · 2022–2024</p>
             <a href="https://github.com/nishanthapa906" target="_blank" rel="noopener noreferrer"
-              className="font-mono text-xs text-primary no-underline hover:underline">
+              className="font-mono text-sm text-primary font-bold no-underline hover:text-green transition-colors">
               github.com/nishanthapa906 ↗
             </a>
           </div>
