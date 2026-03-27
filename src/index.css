@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5.1%;
+    --foreground: 30 20% 90%;
+
+    --card: 0 0% 6.7%;
+    --card-foreground: 30 20% 90%;
+
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 30 20% 90%;
+
+    --primary: 20 76% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 8.6%;
+    --secondary-foreground: 30 20% 90%;
+
+    --muted: 0 0% 10.6%;
+    --muted-foreground: 28 10% 50%;
+
+    --accent: 0 0% 10.6%;
+    --accent-foreground: 30 20% 90%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.06;
+    --ring: 20 76% 63%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Portfolio-specific tokens */
+    --green: 142 71% 65%;
+    --blue: 217 91% 68%;
+    --purple: 263 70% 76%;
+    --yellow: 43 96% 56%;
+    --red: 0 94% 71%;
+    --cream: 34 32% 91%;
+    --cream2: 30 18% 80%;
+    --ink: 0 0% 4%;
+    --text2: 28 10% 50%;
+    --text3: 28 7% 34%;
+    --border2: 0 0% 100% / 0.1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary)); }
+::selection { background: hsl(var(--primary) / 0.2); }
+
+/* Animations */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes dotPulse { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-4px)} }
+@keyframes pulse-dot { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(0.75);opacity:0.4} }
+
+.animate-blink { animation: blink 0.8s step-end infinite; }
+.animate-marquee { animation: marquee 25s linear infinite; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-dot-pulse { animation: dotPulse 1.2s ease-in-out infinite; }
+.animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
