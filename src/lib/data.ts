@@ -8,19 +8,19 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    n: '01', title: 'Sikshya-Sadan', role: 'Full Stack School System', year: '2024',
+    n: '01', title: 'Sikshya-Sadan', role: 'Full Stack School System', year: '2026',
     desc: 'A complete MERN stack school management platform — student records, course management, user authentication, and real-time responsive dashboards. Built end-to-end.',
     stack: ['MongoDB', 'Express.js', 'React.js', 'Node.js'], color: '#60a5fa',
     gh: 'https://github.com/nishanthapa906/Sikshya-Sadan-MERN',
   },
   {
-    n: '02', title: 'Vehicle Renting System', role: 'Enterprise Platform + AI Chatbot', year: '2024',
+    n: '02', title: 'Vehicle Renting System', role: 'Enterprise Platform + AI Chatbot', year: '2025',
     desc: 'Full-stack vehicle renting platform with real-time AI chatbot, built during internship at ArthaSoft Solutions. Owned full frontend UI and backend API workflows.',
     stack: ['Oracle APEX', 'Node.js', 'SQL', 'AI Chatbot'], color: '#4ade80',
     gh: 'https://github.com/nishanthapa906',
   },
   {
-    n: '03', title: 'Voice Emotion Analyzer', role: 'Live CNN Model on HuggingFace', year: '2023',
+    n: '03', title: 'Voice Emotion Analyzer', role: 'Live CNN Model on HuggingFace', year: '2025',
     desc: 'Deep learning model that classifies human emotions from raw audio. Trained CNN on audio datasets, deployed live on Hugging Face Spaces with a Streamlit interface.',
     stack: ['Python', 'CNN', 'Streamlit', 'HuggingFace'], color: '#e8865a',
     gh: 'https://github.com/nishanthapa906/Voice-Emotion-Analyzer',
@@ -39,7 +39,7 @@ export const PROJECTS = [
     gh: 'https://github.com/nishanthapa906',
   },
   {
-    n: '06', title: 'MomoHouse & ToDoApp', role: 'React & Vanilla JS Web Apps', year: '2022',
+    n: '06', title: 'MomoHouse & ToDoApp', role: 'React & Vanilla JS Web Apps', year: '2026',
     desc: 'MomoHouse — a stylish restaurant web app in vanilla JS. ToDoApp — clean React task manager showcasing hooks, component architecture, and state management.',
     stack: ['React.js', 'JavaScript', 'CSS3', 'HTML5'], color: '#f87171',
     gh: 'https://github.com/nishanthapa906/ToDoApp-React',
