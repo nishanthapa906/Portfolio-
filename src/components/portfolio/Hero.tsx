@@ -34,60 +34,60 @@ export function Hero() {
         {/* Left */}
         <div className="flex-1 flex flex-col gap-6 z-10">
           {/* Status */}
-          <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
+          <div className="flex items-center gap-2 font-mono text-xs text-green font-bold">
             <span className="w-2 h-2 rounded-full bg-green animate-pulse-dot" />
             Available · Kathmandu, Nepal 🇳🇵
           </div>
 
           {/* Name */}
           <div>
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold italic text-cream leading-[0.95] tracking-tight">Arjun</h1>
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold text-primary leading-[0.95] tracking-tight">Thapa.</h1>
+            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-black italic text-cream leading-[0.95] tracking-tight">Arjun</h1>
+            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-black text-primary leading-[0.95] tracking-tight">Thapa.</h1>
           </div>
 
           {/* Typewriter */}
-          <div className="font-mono text-sm text-muted-foreground flex items-center gap-1">
-            <span className="text-foreground/30">const role =</span>
+          <div className="font-mono text-lg font-bold text-primary flex items-center gap-1">
+            <span className="text-foreground/50">const role =</span>
             <span className="text-primary">"</span>
-            <span className="text-green">{typed}</span>
-            <span className="inline-block w-[2px] h-4 bg-primary animate-blink" />
+            <span className="text-green font-bold">{typed}</span>
+            <span className="inline-block w-[2px] h-5 bg-primary animate-blink" />
             <span className="text-primary">"</span>
           </div>
 
           {/* Description */}
-          <p className="max-w-md text-muted-foreground text-sm leading-relaxed">
-            I build web applications that are fast, clean and genuinely enjoyable to use — 
-            from React frontends to Node.js backends, MongoDB databases and ML-powered features. 
-            Finishing BCA at Citizen College, Lalitpur.
+          <p className="max-w-lg text-foreground text-base leading-relaxed font-medium">
+            I build web applications that are <span className="text-primary font-bold">fast, clean and genuinely enjoyable</span> to use — 
+            from <span className="text-green font-bold">React frontends</span> to <span className="text-blue font-bold">Node.js backends</span>, MongoDB databases and ML-powered features. 
+            Finishing <span className="text-yellow font-bold">BCA</span> at Citizen College, Lalitpur.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-7 py-3 bg-primary text-primary-foreground font-sans font-medium text-sm rounded-lg hover:-translate-y-0.5 transition-all duration-200 shadow-[0_4px_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_8px_28px_hsl(var(--primary)/0.45)]"
+              className="px-8 py-3 bg-primary text-primary-foreground font-sans font-bold text-base rounded-lg hover:-translate-y-0.5 transition-all duration-200 shadow-[0_4px_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_8px_28px_hsl(var(--primary)/0.45)]"
             >
               See My Work →
             </button>
             <a href="https://github.com/nishanthapa906" target="_blank" rel="noopener noreferrer"
-              className="px-5 py-3 border border-border text-muted-foreground font-sans text-sm rounded-lg no-underline hover:border-primary hover:text-primary transition-all duration-200">
+              className="px-6 py-3 border-2 border-primary text-primary font-sans font-bold text-base rounded-lg no-underline hover:bg-primary hover:text-primary-foreground transition-all duration-200">
               GitHub ↗
             </a>
             <a href="tel:+9779800000000"
-              className="px-5 py-3 border border-border text-muted-foreground font-sans text-sm rounded-lg no-underline hover:border-green hover:text-green transition-all duration-200">
+              className="px-6 py-3 border-2 border-green text-green font-sans font-bold text-base rounded-lg no-underline hover:bg-green hover:text-primary-foreground transition-all duration-200">
               📞 Call
             </a>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-4 gap-4 mt-8 p-6 rounded-xl border border-primary/20" style={{ background: 'hsl(var(--primary) / 0.05)' }}>
             {[
               { n: '6+', l: 'Projects' }, { n: '2025', l: 'Internship' },
               { n: 'MERN', l: 'Core Stack' }, { n: 'BCA', l: '2021–2026' },
             ].map(s => (
               <div key={s.l} className="text-center">
-                <p className="text-lg font-semibold text-cream">{s.n}</p>
-                <p className="text-[0.65rem] text-muted-foreground font-mono uppercase tracking-wider">{s.l}</p>
+                <p className="text-2xl font-black text-primary">{s.n}</p>
+                <p className="text-xs text-foreground font-bold uppercase tracking-widest mt-1">{s.l}</p>
               </div>
             ))}
           </div>
