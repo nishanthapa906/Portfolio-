@@ -56,7 +56,7 @@ export const EXPERIENCE = {
   title: 'Full Stack Intern',
   company: 'ArthaSoft Solutions Pvt. Ltd.',
   location: 'Kathmandu, Nepal',
-  year: '2024',
+  year: '2025',
   bullets: [
     'Built a full-stack Vehicle Renting System from scratch using Oracle APEX (frontend) and Node.js (backend) — from design to production.',
     'Integrated a real-time AI chatbot feature, improving user engagement and automating support interactions.',

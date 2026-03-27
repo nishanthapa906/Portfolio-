@@ -15,8 +15,7 @@ function ProjectRow({ p, i }: { p: typeof PROJECTS[0]; i: number }) {
         className="grid grid-cols-[44px_1fr_auto_36px] gap-5 items-center py-5 px-4 cursor-pointer transition-all duration-200"
         style={{
           borderBottom: open ? 'none' : '1px solid rgba(255,255,255,0.06)',
-          background: h || open ? 'rgba(255,255,255,0.04)' : 'transparent',
-          borderRadius: h || open ? '10px' : '0',
+          background: h || open ? 'rgba(255,255,255,0.02)' : 'transparent',
         }}
       >
         <span className="font-mono text-sm font-bold text-primary">{p.n}</span>
@@ -75,7 +74,7 @@ export function Work() {
             <h2 className="font-serif text-5xl italic text-cream font-black">Projects</h2>
           </div>
           <div className="text-right">
-            <p className="font-mono text-sm text-foreground font-bold">6 projects · 2022–2024</p>
+            <p className="font-mono text-sm text-foreground font-bold">6 projects · 2022–2026</p>
             <a href="https://github.com/nishanthapa906" target="_blank" rel="noopener noreferrer"
               className="font-mono text-sm text-primary font-bold no-underline hover:text-green transition-colors">
               github.com/nishanthapa906 ↗

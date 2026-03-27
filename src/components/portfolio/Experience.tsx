@@ -21,7 +21,7 @@ export function Experience() {
             and <span className="text-yellow font-bold">shipped production code</span> alongside experienced engineers.
           </p>
 
-          <div className="mt-4 p-6 rounded-xl border-2 border-blue bg-blue/10">
+          <div className="mt-4 p-6 border-2 border-blue">
             <h3 className="font-sans font-black text-foreground text-lg mb-2">Education</h3>
             <p className="font-sans text-base text-foreground font-bold">{EDUCATION.degree}</p>
             <p className="font-mono text-sm text-muted-foreground font-semibold">{EDUCATION.school}</p>
@@ -30,13 +30,13 @@ export function Experience() {
         </div>
 
         {/* Right — experience card */}
-        <div className="p-8 rounded-xl border-2 border-primary bg-primary/5">
+        <div className="p-8 border-2 border-primary">
           <div className="flex justify-between items-start mb-6">
             <div>
               <h3 className="font-sans font-black text-foreground text-xl">{EXPERIENCE.title}</h3>
               <p className="font-mono text-sm text-muted-foreground font-semibold">{EXPERIENCE.company} · {EXPERIENCE.location}</p>
             </div>
-            <span className="font-mono text-lg text-green font-black bg-green/10 px-3 py-1 rounded-lg">{EXPERIENCE.year}</span>
+            <span className="font-mono text-lg text-green font-black">{EXPERIENCE.year}</span>
           </div>
 
           <div className="flex flex-col gap-4 mb-6">

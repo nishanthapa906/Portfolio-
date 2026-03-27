@@ -28,7 +28,7 @@ export function Contact() {
             { label: 'Email', href: 'mailto:nishanthapa906@gmail.com' },
           ].map(link => (
             <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
-              className="font-mono text-base text-foreground font-bold hover:text-primary hover:scale-110 transition-all duration-200 no-underline">
+              className="font-mono text-base text-foreground font-bold hover:text-primary transition-colors duration-200 no-underline">
               {link.label} ↗
             </a>
           ))}
@@ -36,7 +36,7 @@ export function Contact() {
 
         <div className="mt-16 pt-8 border-t border-border">
           <p className="font-mono text-[0.65rem] text-muted-foreground/50">
-            © 2024 Arjun Thapa · Built with React & Tailwind
+            © 2026 Arjun Thapa · Built with React & Tailwind
           </p>
         </div>
       </div>
