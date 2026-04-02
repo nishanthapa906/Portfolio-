@@ -26,7 +26,7 @@ const Projects = [
     tech: 'MERN Stack'
   },
   {
-    name: 'Live Voice Emotion Analyzer',
+    name: 'Voice Emotion Analyzer',
     desc: 'Intelligent AI model analyzing real-time vocal patterns to detect emotional states with high accuracy.',
     link: 'https://92043jej-nissan-space.hf.space/',
     tech: 'Python, ML, CNN',
@@ -49,13 +49,12 @@ const buildSuccess = (coffee, passion) => {
 };
 
 console.log(buildSuccess(true, stats.active));`;
-
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [roleIdx, setRoleIdx] = useState(0);
   const [typedRole, setTypedRole] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const roles = ['Full Stack Developer', 'MERN Engineer', 'Software Architect', 'ML Specialist', 'APEX Developer'];
+  const roles = ['Full Stack Developer', 'MERN Enthusiast', 'ML Specialist', 'APEX Developer'];
 
   useEffect(() => {
     const handleMove = (e) => {
@@ -119,8 +118,8 @@ export default function App() {
               <span className="w-[3px] h-6 bg-primary ml-1 animate-blink" />
             </div>
             <p className="max-w-lg text-lg text-muted-foreground font-medium mb-12 leading-relaxed">
-              Architecting high-performance digital solutions with MERN and Oracle APEX. Specializing in intelligent systems and seamless user experiences.
-              Currently building at <span className="text-white border-b-2 border-primary/50 font-bold">Citizen College</span>.
+              Architecting high-performance digital solutions with MERN, Oracle APEX and ML. Specializing in intelligent systems and seamless user experiences.
+              I am a BCA student from <span className="text-white border-b-2 border-primary/50 font-bold">Citizen College, Pokhara University </span>.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#work" className="px-10 py-5 bg-primary text-black font-black uppercase tracking-widest rounded-2xl hover:scale-105 transition-all shadow-[0_10px_40px_rgba(0,255,106,0.2)]">
@@ -136,14 +135,14 @@ export default function App() {
           <div className="relative group perspective">
             {/* Project/Code Card */}
             <div className="relative glass rounded-3xl border border-white/10 overflow-hidden shadow-2xl mb-8 group-hover:-translate-y-2 transition-all duration-700">
-               <div className="bg-white/5 px-6 py-4 flex items-center justify-between border-b border-white/5">
+              <div className="bg-white/5 px-6 py-4 flex items-center justify-between border-b border-white/5">
                 <div className="flex gap-2">
                   <div className="w-3.5 h-3.5 rounded-full bg-[#ff5f57]" />
                   <div className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]" />
                   <div className="w-3.5 h-3.5 rounded-full bg-[#28c840]" />
                 </div>
                 <div className="glass px-4 py-1.5 rounded-xl border border-primary/20">
-                    <span className="text-[10px] font-mono text-primary font-black uppercase tracking-widest">ARJUN.js</span>
+                  <span className="text-[10px] font-mono text-primary font-black uppercase tracking-widest">ARJUN.js</span>
                 </div>
               </div>
               <pre className="p-8 font-mono text-sm leading-relaxed overflow-x-auto text-primary/80 min-h-[280px]">
@@ -227,29 +226,30 @@ export default function App() {
       {/* Projects */}
       <section id="work" className="py-40 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-baseline gap-4 mb-24">
-          <h2 className="text-7xl md:text-9xl font-black tracking-tighter">PROJECTS.</h2>
-          <p className="text-primary font-black uppercase tracking-[0.3em] font-mono text-xs">Curated Portfolio 2024</p>
-               <div className="grid md:grid-cols-2 gap-12">
+          <h2 className="text-7xl md:text-9xl font-black tracking-tighter uppercase">Projects</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           {Projects.map((p, idx) => (
-            <a key={idx} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative block">
-              <div className="aspect-[16/10] glass rounded-[3rem] p-8 md:p-12 flex flex-col group-hover:bg-primary/[0.03] transition-all duration-700 border border-white/5 group-hover:border-primary/30 relative overflow-hidden shadow-2xl">
-                <div className="absolute top-8 md:top-12 right-8 md:right-12 w-12 h-12 md:w-14 md:h-14 rounded-2xl border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-all duration-500 group-hover:rotate-12">
-                  <span className="text-xl md:text-2xl">↗</span>
+            <a key={idx} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative block w-full">
+              <div className="aspect-[16/10] glass rounded-[3rem] p-8 md:p-14 flex flex-col group-hover:bg-primary/[0.03] transition-all duration-700 border border-white/5 group-hover:border-primary/30 relative overflow-hidden shadow-2xl">
+                <div className="absolute top-8 md:top-12 right-8 md:right-12 w-12 h-12 md:w-16 md:h-16 rounded-2xl border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-all duration-500 group-hover:rotate-12">
+                  <span className="text-xl md:text-3xl">↗</span>
                 </div>
                 <div className="mb-auto">
-                  <div className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] text-primary/50 mb-4 md:mb-6 flex items-center gap-3">
-                    <span className="w-8 h-px bg-primary/20" /> 0{idx +1}
+                  <div className="text-[10px] md:text-[14px] font-black uppercase tracking-[0.3em] text-primary/50 mb-4 md:mb-8 flex items-center gap-3">
+                    <span className="w-12 h-px bg-primary/20" /> 0{idx + 1}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black mb-3 md:mb-4 leading-none group-hover:text-primary transition-colors">{p.name}</h3>
-                  <p className="text-[10px] md:text-xs font-mono text-muted-foreground/60 mb-4 md:mb-6 uppercase tracking-widest">{p.tech}</p>
+                  <h3 className="text-3xl md:text-5xl font-black mb-3 md:mb-6 leading-none group-hover:text-primary transition-colors tracking-tighter">{p.name}</h3>
+                  <p className="text-[10px] md:text-xs font-mono text-muted-foreground/60 mb-4 md:mb-8 uppercase tracking-widest">{p.tech}</p>
                 </div>
-                <p className="text-sm md:text-lg text-muted-foreground/80 leading-relaxed mb-6 md:mb-10 max-w-md line-clamp-2">{p.desc}</p>
-                <div className="flex gap-6 items-center">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-primary border-b-2 border-primary pb-px group-hover:opacity-70 transition-opacity">Full Case Study</span>
+                <p className="text-sm md:text-xl text-muted-foreground/80 leading-relaxed mb-6 md:mb-12 max-w-lg line-clamp-2">{p.desc}</p>
+                <div className="flex gap-10 items-center">
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-primary border-b-2 border-primary pb-px group-hover:opacity-70 transition-opacity">Full Case Study</span>
                   {p.demo && (
-                    <span 
+                    <span
                       onClick={(e) => { e.preventDefault(); window.open(p.demo, '_blank'); }}
-                      className="text-[10px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors flex items-center gap-2"
+                      className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors flex items-center gap-2"
                     >Live Demo <span>⬀</span></span>
                   )}
                 </div>
@@ -257,7 +257,6 @@ export default function App() {
             </a>
           ))}
         </div>
-     </div>
         <div className="mt-24 text-center">
           <a href="https://github.com/nishanthapa906" target="_blank" className="inline-flex items-center gap-4 px-12 py-6 glass rounded-full border border-white/10 hover:border-primary/50 hover:scale-105 transition-all font-black text-xs uppercase tracking-widest">
             More on GitHub <span className="text-xl"></span>
@@ -274,10 +273,10 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-12 md:gap-24 font-black uppercase tracking-[0.3em] text-[10px]">
             <a href="mailto:nishanthapa906@gmail.com" className="hover:text-primary tracking-tighter md:tracking-[0.3em] transition-all hover:scale-110">nishanthapa906@gmail.com</a>
             <a href="https://github.com/nishanthapa906" target="_blank" className="hover:text-primary transition-all hover:scale-110">GitHub</a>
-            <a href="https://www.linkedin.com/in/arjun-thapa-75691122a" target="_blank" className="hover:text-primary transition-all hover:scale-110">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/arjun-thapa-b659811a3/?skipRedirect=true" target="_blank" className="hover:text-primary transition-all hover:scale-110">LinkedIn</a>
           </div>
           <div className="mt-48 pt-16 border-t border-white/5 flex flex-col md:row justify-between items-center gap-8 opacity-40">
-            <p className="text-[9px] font-mono uppercase tracking-[0.5em]">System Architecture © 2024</p>
+            <p className="text-[9px] font-mono uppercase tracking-[0.5em]">Arjun Thapa © 2026</p>
             <p className="text-[9px] font-mono uppercase tracking-[0.5em]">Designed with Intention</p>
           </div>
         </div>

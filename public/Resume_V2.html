@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun Thapa - Resume</title>
+    <title>Arjun Thapa - Professional Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
         :root {
-            --primary: #00ff66;
+            --primary: #111111;
+            --accent: #0088cc;
             --bg: #ffffff;
-            --text: #111111;
-            --muted: #555555;
-            --accent: #f0fff4;
-            --border: #e2e8f0;
+            --text-main: #111111;
+            --text-muted: #444444;
+            --border: #dddddd;
         }
 
         * {
@@ -24,286 +25,351 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background: #ffffff;
-            line-height: 1.35;
+            background-color: #f7f7f7;
+            color: var(--text-main);
+            line-height: 1.3;
+            display: flex;
+            justify-content: center;
         }
 
-        .page {
+        .resume-container {
             width: 210mm;
-            height: 297mm;
-            padding: 40px;
-            margin: 0 auto;
+            min-height: 297mm;
+            background: var(--bg);
+            padding: 30px 45px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
         }
 
         header {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: flex-end;
-            border-bottom: 2px solid var(--text);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2.5px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border);
         }
 
         .name-title h1 {
-            font-size: 38px;
+            font-size: 40px;
             font-weight: 800;
-            letter-spacing: -2px;
+            letter-spacing: -1.5px;
             text-transform: uppercase;
             line-height: 1;
+            margin-bottom: 4px;
         }
 
         .name-title p {
-            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+            font-size: 15px;
             font-weight: 700;
-            color: var(--muted);
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .contact-info {
             text-align: right;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 600;
-            line-height: 1.5;
+            color: var(--text-muted);
         }
 
         .contact-info a {
-            color: var(--text);
+            color: var(--text-main);
             text-decoration: none;
             display: block;
-        }
-
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr 2.2fr;
-            gap: 35px;
-            flex-grow: 1;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 13px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            margin-bottom: 12px;
-            border-left: 3px solid var(--primary);
-            padding-left: 10px;
-            color: var(--text);
-        }
-
-        .summary {
-            font-size: 12px;
-            color: var(--muted);
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .skill-group {
-            margin-bottom: 12px;
-        }
-
-        .skill-group h3 {
-            font-size: 10px;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 5px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .skill-tags span {
-            font-size: 9.5px;
-            background: var(--accent);
-            padding: 3px 7px;
-            border: 1px solid rgba(0,255,102,0.2);
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .project {
-            margin-bottom: 16px;
-        }
-
-        .project-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
             margin-bottom: 3px;
         }
 
-        .project h3 {
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2.15fr;
+            gap: 30px;
+        }
+
+        section {
+            margin-bottom: 12px;
+        }
+
+        h2 {
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
         }
 
-        .project .tech-stack {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 9px;
-            color: #ffffff;
-            background: #000;
-            padding: 1.5px 5px;
-            border-radius: 3px;
+        .summary p {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            line-height: 1.4;
         }
 
-        .project p {
+        .skill-group {
+            margin-bottom: 8px;
+        }
+
+        .skill-group h3 {
+            font-size: 11px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .skill-list {
             font-size: 11.5px;
-            color: var(--muted);
-            line-height: 1.45;
+            color: var(--text-muted);
+            font-weight: 500;
+            line-height: 1.3;
         }
 
-        .education-box {
-            background: var(--accent);
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px dashed var(--primary);
+        .project-item {
+            margin-bottom: 10px;
         }
 
-        .edu-item h3 {
-            font-size: 12px;
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
             margin-bottom: 2px;
         }
 
-        .edu-item p {
-            font-size: 10px;
-            color: var(--muted);
-        }
-
-        .gpa {
-            font-size: 13px;
+        .project-header h3 {
+            font-size: 15px;
             font-weight: 800;
-            color: var(--text);
-            margin-top: 8px;
+            color: var(--text-main);
         }
 
-        .gpa span {
-            color: #00993d;
+        .project-header span {
+            font-size: 9.5px;
+            font-weight: 800;
+            background: #f0f0f0;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .project-item p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.35;
+        }
+
+        .sidebar-item h3 {
+            font-size: 13px;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+
+        .sidebar-item p,
+        .sidebar-item li {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            list-style: none;
+            margin-bottom: 1px;
+        }
+
+        .date-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 1px;
+            display: block;
         }
 
         @media print {
-            .page { width: 100%; height: auto; padding: 20px; }
-            body { background: #fff; }
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                width: 100%;
+                border: none;
+                padding: 10mm 15mm;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="page">
+    <div class="resume-container">
         <header>
-            <div class="name-title">
-                <h1>Arjun Thapa</h1>
-                <p>Full Stack Engineer & Machine Learning Specialist</p>
+            <div class="header-left">
+                <img src="./profile.jpg" alt="Arjun Thapa" class="profile-img">
+                <div class="name-title">
+                    <h1>Arjun Thapa</h1>
+                    <p>Full Stack Developer & ML Enthusiast</p>
+                </div>
             </div>
             <div class="contact-info">
                 <a href="mailto:nishanthapa906@gmail.com">nishanthapa906@gmail.com</a>
                 <a href="https://github.com/nishanthapa906">github.com/nishanthapa906</a>
+                <a href="https://www.linkedin.com/in/arjun-thapa-b659811a3/">linkedin.com/in/arjunthapa</a>
                 <span>Kathmandu, Nepal</span>
             </div>
         </header>
 
-        <div class="main-grid">
+        <div class="main-content">
             <aside>
-                <section>
+                <section class="summary">
                     <h2>Profile</h2>
-                    <p class="summary">
-                        Software developer specializing in high-performance digital solutions. Proficient in MERN Stack and Oracle APEX. 
-                        Dedicated to creating scalable web applications and intelligent AI systems with a focus on premium UX.
+                    <p>
+                        <strong>High-performance developer</strong> building scalable digital systems with
+                        <strong>MERN</strong> and <strong>Oracle APEX</strong>. Focused on <strong>AI and ML</strong>
+                        integration and efficient backend logic.
                     </p>
                 </section>
 
                 <section>
-                    <h2>Expertise</h2>
+                    <h2>Stack</h2>
                     <div class="skill-group">
                         <h3>Frontend</h3>
-                        <div class="skill-tags">
-                            <span>React</span><span>Next.js</span><span>Oracle APEX</span><span>Tailwind CSS</span>
-                        </div>
+                        <p class="skill-list"><strong>React, Oracle APEX</strong>, Tailwind CSS</p>
                     </div>
                     <div class="skill-group">
                         <h3>Backend</h3>
-                        <div class="skill-tags">
-                            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST APIs</span>
-                        </div>
+                        <p class="skill-list"><strong>Node.js, Express, MongoDB</strong>, REST APIs</p>
                     </div>
                     <div class="skill-group">
                         <h3>Tools & AI</h3>
-                        <div class="skill-tags">
-                            <span>Git</span><span>Python</span><span>ML (SVM, CNN)</span><span>Socket.io</span>
-                        </div>
+                        <p class="skill-list"><strong>ML (SVM, CNN)</strong>, Socket.io, Git, Python</p>
                     </div>
                 </section>
 
                 <section>
                     <h2>Education</h2>
-                    <div class="education-box">
-                        <div class="edu-item">
-                            <h3>Citizen College</h3>
-                            <p>Bachelor in Computer Applications (BCA)</p>
-                            <div class="gpa">GPA: <span>3.4 / 4.0</span></div>
-                        </div>
+                    <div class="sidebar-item">
+                        <span class="date-badge">2021 – 2026</span>
+                        <h3>Citizen College </h3>
+                        <p class="skill-list"><strong>Pokhara University</strong>
+                        <p>Bachelor Of Computer Applications (BCA)</p>
+                        <p style="font-weight: 800; color: #000; margin-top: 2px;">CGPA: 3.4 / 4.0</p>
                     </div>
+                </section>
+
+                <section>
+                    <h2>Hobbies</h2>
+                    <ul class="sidebar-item" style="line-height: 1.4;">
+                        <li>• Programming & Automation</li>
+                        <li>• Typing Competitions</li>
+                        <li>• Document Design (LaTeX)</li>
+                        <li>• Exploring AI Tools</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Languages</h2>
+                    <ul class="sidebar-item" style="line-height: 1.4;">
+                        <li>• Nepali – <strong>Native</strong></li>
+                        <li>• English – <strong>Fluent</strong></li>
+                        <li>• Hindi – <strong>Fluent</strong></li>
+                    </ul>
                 </section>
             </aside>
 
             <main>
                 <section>
                     <h2>Core Projects</h2>
-                    
-                    <div class="project">
-                        <div class="project-head">
-                            <h3>Vehicle Renting System</h3>
-                            <span class="tech-stack">APEX + Node.js</span>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Sisksya Sadan</h3>
+                            <span>MERN Stack</span>
                         </div>
-                        <p>Enterprise solution with real-time chat, automated location tracking, and premium fleet management. Optimized for enterprise scalability.</p>
+                        <p><strong>Academic ERP</strong> for student data and grading. Features <strong>multi-role
+                                authentication</strong> and <strong>eSewa and Khalti</strong> payments.</p>
                     </div>
 
-                    <div class="project">
-                        <div class="project-head">
-                            <h3>Sisksya Sadan (Academic ERP)</h3>
-                            <span class="tech-stack">MERN Stack</span>
-                        </div>
-                        <p>Robust management platform for educational institutions. Handles complex student datasets and grading with secure authentication.</p>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-head">
-                            <h3>Momo Houser</h3>
-                            <span class="tech-stack">MERN Stack</span>
-                        </div>
-                        <p>Full-stack food commerce platform with dynamic menu systems and ordering workflow. Focused on responsive aesthetics.</p>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-head">
+                    <div class="project-item">
+                        <div class="project-header">
                             <h3>Voice Emotion Analyzer</h3>
-                            <span class="tech-stack">Python + ML</span>
+                            <span>Python / ML</span>
                         </div>
-                        <p>Sophisticated AI model utilizing CNN to analyze vocal patterns for real-time emotional state detection. High precision results.</p>
+                        <p>AI model utilizing <strong>CNN</strong> for <strong>real-time voice emotion
+                                recognition</strong>. Deployed on high-precision hosted environments.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Vehicle Renting System</h3>
+                            <span>Oracle APEX</span>
+                        </div>
+                        <p>Enterprise solution with <strong>real-time chat</strong> and location tracking and multi
+                            roles support. Optimized for large-scale fleet management.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Momo Houser</h3>
+                            <span>React</span>
+                        </div>
+                        <p>Commerce platform with <strong>Google Auth</strong>, local storage, and
+                            <strong>eSewa</strong> checkout integration.
+                        </p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>MERN Auth & Admin Portal</h3>
+                            <span>MERN Stack</span>
+                        </div>
+                        <p>Platform with <strong>JWT authentication</strong> and a dual User and Admin dashboard for
+                            robust user management.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Nepali Number Plate recognition</h3>
+                            <span>SVM / Python</span>
+                        </div>
+                        <p>Detection system for Bagmati province plates (Cars/Bikes) using <strong>image processing and
+                                SVM</strong>.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>React To-Do Application</h3>
+                            <span>React / Vite</span>
+                        </div>
+                        <p>Interactive task tool with <strong>local storage persistence</strong> and seamless task
+                            organization.</p>
                     </div>
                 </section>
 
                 <section>
-                    <h2>Experience</h2>
-                    <div class="project">
-                        <div class="project-head">
-                            <h3>Engineering Internship</h3>
-                            <span>3 Months</span>
+                    <h2 style="margin-top: 10px;">Professional Experience</h2>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Oracle Apex Intern</h3>
+                            <span style="background: #000; color: #fff;">MAR – JUN 2025</span>
                         </div>
-                        <p>Applied modern development patterns to scale enterprise web tools. Focused on full-stack optimization and component modularity.</p>
+                        <p><strong>3 Months Duration</strong></p>
+                        <p>Contributed to real world applications by implementing modular architectures and optimizing
+                            queries.</p>
                     </div>
                 </section>
             </main>
         </div>
     </div>
 </body>
+
 </html>
