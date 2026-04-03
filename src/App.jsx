@@ -91,7 +91,7 @@ export default function App() {
       {/* Nav */}
       <nav className={`fixed top-0 w-full z-50 transition-all ${scrolled ? 'glass py-4 shadow-2xl' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <span className="text-3xl font-black tracking-tighter text-primary hover:scale-105 transition-transform cursor-pointer">ARJUN.</span>
+          <span className="text-3xl font-black tracking-tighter text-primary hover:scale-105 transition-transform cursor-pointer">THAPA KAJI.com</span>
           <div className="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#work" className="hover:text-primary transition-colors">Work</a>
@@ -110,7 +110,7 @@ export default function App() {
             </div>
             <h1 className="text-6xl md:text-8xl xl:text-9xl font-black leading-[0.9] tracking-tighter mb-8">
               ARJUN<br />
-              <span className="text-primary italic">THAPA.</span>
+              <span className="text-primary italic">THAPA</span>
             </h1>
             <div className="h-12 flex items-center font-mono text-xl text-primary font-black mb-10">
               <span className="text-muted-foreground/50 mr-4">_</span>
@@ -190,7 +190,7 @@ export default function App() {
               <div>
                 <h2 className="text-5xl font-black mb-3 italic tracking-tight">Limitless <span className="text-primary">Vision.</span></h2>
                 <div className="flex items-center gap-2 text-primary font-black text-[10px] uppercase tracking-widest font-mono">
-                  Certified Engineering Intern
+                  Certified Developer Intern
                 </div>
               </div>
             </div>
